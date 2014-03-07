@@ -27,3 +27,5 @@ Question: What value would we set to simulate a 50MHz clock?
     Answer: T = 1/f so period would be 20ns.
     
 
+
+Documentation: C3C Bolinger and I discussed how to correctly implement the testbench; he helped me realize that we must switch between states by following a pattern of assigning values to up_down and stop followed by waiting between assigning them new values. We also discussed implementing the nextFloor output. We each had different ideas as to how it might be implemented: I thought I would write a separate 'when' case for each possibility, while C3C Bolinger wanted to "chain" a bunch of 'and' and 'or' statements together to create many fewer individualy, albeit much longer, lines of code.
